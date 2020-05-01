@@ -542,6 +542,7 @@ def generate_vs_project(env, num_jobs):
         env.AddToVSProject(env.scene_sources)
         env.AddToVSProject(env.servers_sources)
         env.AddToVSProject(env.editor_sources)
+        env.AddToVSProject(env.boids_sources)
 
         # windows allows us to have spaces in paths, so we need
         # to double quote off the directory. However, the path ends

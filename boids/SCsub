@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+
+Import('env')
+
+env.boids_sources = []
+
+env.add_source_files(env.boids_sources, "*.cpp")
+
+lib = env.add_library("boids", env.boids_sources)
+env.Prepend(LIBS=[lib])

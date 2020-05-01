@@ -30,6 +30,7 @@
 
 #include "main.h"
 
+#include "boids/register_boids_types.h"
 #include "core/crypto/crypto.h"
 #include "core/input_map.h"
 #include "core/io/file_access_network.h"
@@ -1348,6 +1349,10 @@ Error Main::setup2(Thread::ID p_main_tid_override) {
 
 #endif
 
+#define BOIDS_ENABLED
+#ifdef BOIDS_ENABLED
+	register_boids_types();
+#endif
 	MAIN_PRINT("Main: Load Modules, Physics, Drivers, Scripts");
 
 	register_platform_apis();
